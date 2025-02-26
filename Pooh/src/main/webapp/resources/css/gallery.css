@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+#pageMoveUP {
+	background-color: transparent;
+	height: 30px;
+	width: 100%;
+	color: black;
+	font-family: "k";
+}
+#pageMoveDown {
+	background-color: transparent;
+	height: 30px;
+	width: 100%;
+	color: black;
+	font-family: "k";
+}
+
+#galleryTbl {
+	color: black;
+	width: 90%;
+	margin: 20px;
+}
+
+#galleryTbl th{
+	padding-top: 80px;
+	font-size: 35px;
+}
+#galleryTbl #searchTbl{
+	width: 220px;
+}
+#galleryTbl #searchInput{
+	width: 140px;
+	font-family: "k";
+	font-size: 17px;
+	outline: none;
+	border: #BFA688 solid 2px;
+	border-radius: 10px;	
+	background-color: #EEE5D3;
+	padding: 5px;
+	resize: none;
+}
+#galleryTbl #searchBtn{
+	width: 50px;
+	padding: 4px;
+	font-size: 17px;
+	border-radius: 10px;
+	border: none;
+	background-color: #EEE5D3;
+	color: #BFA688;
+	font-family: "k";
+	padding-bottom:5px;  
+	padding-top:5px;  
+	margin-right: 5px;
+}
+#galleryTbl #goUpload{
+	font-size: 20px;
+	text-decoration: none;
+	color: #EEE5D3;
+	border: none;
+	background-color: #BFA688;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#galleryTbl #a, #searchTbl {
+	padding-bottom: 10px; 
+	padding-top: 20px; 
+}
+
+.postsTbl{
+	width: 47%;
+	height: 300px;
+	float: left;
+	margin: 5px;
+	border: #BFA688 solid 1px;
+	border-radius: 10px;
+	padding: 5px;
+}
+.postsTbl .icon{
+	width: 25px;
+}
+.postsTbl button{
+	border: none;
+	background-color: transparent;
+}
+.postsTbl .pg_title{
+	font-size: 25px;
+}
+
+.postsTbl .pg_writer, .pg_date{
+	color: #BFA688;
+}
+
+
+.postsTbl #postPhoto{
+	max-width: 150px;
+}
+
+#uploadTbl {
+	color: black;
+}
+
+#uploadTbl th{
+	padding-top: 100px;
+	font-size: 35px;
+}
+
+#uploadTbl .label {
+	padding-top: 20px;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+
+#uploadTbl input{
+	width:250px;
+	padding: 8px;
+	font-size: 20px;
+	outline: none;
+	border: #BFA688 solid 2px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-family: "k";
+	color: #BFA688;
+}
+#uploadTbl button {
+	margin-top: 20px;
+	width:250px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 10px;
+	color: #EEE5D3;
+	font-family: "k";
+	background-color: #BFA688;
+	border: none;
+}

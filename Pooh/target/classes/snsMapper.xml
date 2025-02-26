@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kdy.pooh.sns.SnsMapper">
+	<select id="snsGet" resultType="com.kdy.pooh.sns.Sns"
+			parameterType="com.kdy.pooh.sns.SnsPostPager">
+		select * 
+		from 
+			(
+				select ps_no, ps_txt, ps_date, ps_writer
+				from 
+					(
+					select rownum as rn, ps_no, ps_txt, ps_date, ps_writer
+					from (
+						select * 
+						from pooh2_sns
+						where ps_writer like '%'||#{search}||'%' or ps_txt like '%'||#{search}||'%'
+						order by ps_date desc
+						)
+					) 
+					where rn &gt;= #{start} and rn &lt;= #{end}
+			), 
+			(
+				select pm_photo, pm_id
+				from pooh2_member 
+				where pm_id in (
+							select ps_writer
+							from (
+								select rownum as rn, ps_no, ps_txt, ps_date, ps_writer
+								from (
+									select * 
+									from pooh2_sns
+									where ps_writer like '%'||#{search}||'%' or ps_txt like '%'||#{search}||'%'
+									order by ps_date desc
+								)
+							) 
+							where rn &gt;= #{start} and rn &lt;= #{end}
+						)
+			)
+		where ps_writer = pm_id
+		order by ps_date desc
+	</select>
+	
+	<select id="getPostCount" parameterType="com.kdy.pooh.sns.SnsPostPager"
+			resultType="java.lang.Integer">
+		select count(*) from pooh2_sns where ps_writer like '%'||#{search}||'%' or ps_txt like '%'||#{search}||'%'
+	</select>
+	
+	<insert id="write" parameterType="com.kdy.pooh.sns.Sns">
+		insert into pooh2_sns values(pooh2_sns_seq.nextval, #{ps_txt},
+				sysdate, #{ps_writer})
+	</insert>
+	
+	<delete id="snsDelete" parameterType="com.kdy.pooh.sns.Sns">
+		delete from pooh2_sns where ps_no = #{ps_no}
+	</delete>
+	
+	<update id="postUpdate" parameterType="com.kdy.pooh.sns.Sns">
+		update pooh2_sns set ps_txt = #{ps_txt} where ps_no = #{ps_no}
+	</update>
+	
+	<insert id="replyWrite" parameterType="com.kdy.pooh.sns.SnsReply">
+		insert into pooh2_sns_reply values(pooh2_sns_reply_seq.nextval, #{psr_ps_no},
+				#{psr_writer}, #{psr_txt}, sysdate)
+	</insert>
+	
+	<select id="snsReplyGet" resultType="com.kdy.pooh.sns.SnsReply" parameterType="com.kdy.pooh.sns.Sns">
+		select * from pooh2_sns_reply where psr_ps_no = #{ps_no}
+	</select>
+	
+	<update id="replyUpdate" parameterType="com.kdy.pooh.sns.SnsReply">
+		update pooh2_sns_reply set psr_txt = #{psr_txt} where psr_no = #{psr_no}
+	</update>
+	
+	<delete id="replyDelete" parameterType="com.kdy.pooh.sns.SnsReply">
+		delete from pooh2_sns_reply where psr_no = #{psr_no}
+	</delete>
+	
+</mapper>

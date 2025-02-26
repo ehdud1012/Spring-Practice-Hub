@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+#pageMoveLeft{
+	background-color: transparent;
+	position: fixed;
+	width: 30px;
+	height: 70%;
+	font-size: 30px;
+	color: black;
+	font-family: "k";
+	
+}
+
+#pageMoveRight{
+	background-color: transparent;
+	position: fixed;
+	width: 30px;
+	right: 0px;
+	height: 70%;
+	font-size: 30px;
+	color: black;
+	font-family: "k";
+}
+
+#snsTbl{
+	padding-top: 100px;
+	color: black;
+	padding-bottom: 300px;
+}
+#snsTbl #searchArea{
+	background-color: #BFA688;
+	border-radius: 10px;
+}
+
+#snsTbl #searchInput{
+	width: 170px;
+	font-family: "k";
+	font-size: 20px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	background-color: #EEE5D3;
+	padding: 5px;
+	resize: none;
+	margin: 5px;
+}
+#snsTbl #searchBtn{
+	width: 50px;
+	padding: 4px;
+	font-size: 17px;
+	border-radius: 10px;
+	border: none;
+	background-color: #EEE5D3;
+	color: #BFA688;
+	font-family: "k";
+	padding-bottom:5px;  
+	padding-top:5px;  
+	margin-right: 5px;
+}
+
+#snsTbl th {
+	font-size: 35px;
+}
+
+#contentTable {
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border: #BFA688 solid 4px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+#snsTbl #page a{
+	font-size: 30px;
+	text-decoration: none;
+	color: black;	
+}
+#snsTbl #page a:hover{
+	color: white;
+}
+
+#contentTable .writerProfile{
+	width: 100px;
+}
+#contentTable .txt{
+	height: 100px;
+}
+#contentTable .bg{
+	background-color: #BFA688;
+}
+
+#contentTable .button div {
+	padding-top: 5px;
+}
+
+#contentTable .button #replyW {
+	width: 140px;
+	font-family: "k";
+	font-size: 20px;
+	outline: none;
+	border: none;
+	border-bottom: #BFA688 solid 4px;
+	background-color: #EEE5D3;
+	padding: 5px;
+	resize: none;
+	margin: 5px;
+}
+#contentTable .button .r_writer {
+	width: 50px;
+	padding: 4px;
+	font-size: 17px;
+	border-radius: 10px;
+	border: none;
+	background-color: #BFA688;
+	color: #EEE5D3;
+	font-family: "k";
+	padding-bottom:5px;  
+	padding-top:5px;
+	margin-right: 5px;
+}
+#contentTable .button .r_date {
+	text-align: right;
+	font-size: 15px;
+}
+
+#contentTable td{
+	padding-left:5px;  
+	padding-right:5px;  
+}
+
+#contentTable .profileForm{
+	padding-bottom:5px;  
+	padding-top:5px;  
+	width: 112px;
+	border-right: #BFA688 solid 1px;
+}
+#contentTable .writer{
+	border-bottom: #BFA688 solid 1px;
+	font-size: 23px;
+}
+#contentTable .date{
+	border-bottom: #BFA688 solid 1px;
+	font-size: 15px;
+}
+#contentTable .button{
+	border-top: #BFA688 solid 1px;
+}
+
+#contentTable button{
+	width: 50px;
+	padding: 4px;
+	font-size: 17px;
+	border-radius: 10px;
+	border: none;
+	background-color: #BFA688;
+	color: #EEE5D3;
+	font-family: "k";
+	padding-bottom:5px;  
+	padding-top:5px;  
+}
+#contentTable .replyTbl{
+	width: 200px;
+	font-size: 17px;
+	border: none;
+	border-bottom: #BFA688 solid 2px;
+	font-family: "k";
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#contentTable .button .r_date {
+	text-align: right;
+	font-size: 15px;
+}
+#contentTable .replyTbl .r_writer{
+	font-size: 25px;
+}
+#contentTable .replyTbl .r_txt{
+	font-size: 20px;
+	padding-left: 13px;
+}
+#contentTable .replyTbl button{
+	width: 27px;
+	background-color: transparent;
+	color: #BFA688;
+	font-family: "k";
+	padding-bottom:5px;  
+	padding-top:5px;  
+	padding: 0px;
+}
+
+#noticeRegTable {
+	width: 100%;
+	position: fixed;
+	bottom: 60px;
+	left: 0px;
+	background-color: #EEE5D3;
+	border-top: #BFA688 solid 4px;
+}
+#noticeRegTable textarea{
+	width: 80%;
+	height: 40px;
+	font-family: "k";
+	font-size: 20px;
+	outline: none;
+	border: #BFA688 solid 4px;
+	border-radius: 10px;
+	background-color: transparent;
+	padding: 10px;
+	resize: none;
+	margin-bottom: 10px;
+}
+
+#noticeRegTable button{
+	width: 50px;
+	padding: 4px;
+	font-size: 17px;
+	border-radius: 10px;
+	border: none;
+	background-color: #BFA688;
+	color: #EEE5D3;
+	font-family: "k";
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 30px;
+}

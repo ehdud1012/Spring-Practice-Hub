@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kdy.pooh.photogallery.PhotoGalleryMapper">
+	<insert id="photoUpload" parameterType="com.kdy.pooh.photogallery.PhotoGallery">
+		insert into pooh2_gallery
+		 values(pooh2_gallery_seq.nextval, #{pg_writer}, #{pg_title}, #{pg_file}, sysdate)
+	</insert>
+	
+	<select id="galleryGet" resultType="com.kdy.pooh.photogallery.PhotoGallery"
+			parameterType="com.kdy.pooh.photogallery.GalleryPostSelector">
+		select pg_no, pg_writer, pg_title, pg_file, pg_date
+		from (
+			select rownum as rn, pg_no, pg_writer, pg_title, pg_file, pg_date
+			from (
+				select *
+				from pooh2_gallery
+				where pg_title like '%'||#{g_search}||'%'
+				order by pg_date desc
+			)
+		) 
+		where rn >= 1 and rn &lt;= #{g_end}
+	</select>
+	
+	<delete id="photoDelete" 
+		parameterType="com.kdy.pooh.photogallery.PhotoGallery">
+		delete from pooh2_gallery where pg_no = #{pg_no}
+	</delete>
+	
+	<select id="galleryPostCount" parameterType="com.kdy.pooh.photogallery.GalleryPostSelector"
+				resultType="java.lang.Integer">
+		select count(*) from pooh2_gallery where pg_title like '%'||#{g_search}||'%'
+	</select>
+</mapper>

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@font-face{
+	font-family: "k";
+	src: url("king.ttf");
+}
+
+body {
+	margin:0px;
+	padding: 0px;
+	background-color: #EEE5D3;
+	color: #F2EBDC;
+	font-family: "k";
+}
+
+a{
+	text-decoration: none;
+	font-family: "k";
+}
+
+table {
+	border-spacing: 0px;
+	font-family: "k";
+}
+
+#siteTitleArea{
+	width: 100%;
+	background-color: #BFA688;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index : 1;
+}
+
+#siteTitle {
+	height: 50px;
+	padding-left: 20px;
+	padding-top:10px;
+}
+#siteTitle a {
+	color: #F2EBDC;
+	font-size: 45px;
+	font-weight: 900;
+	font-family: "k";
+}
+
+#siteTitle a:hover {
+	color: white;
+}
+
+#siteMenuArea {
+	background-color: #BFA688;
+	font-size: 17px;
+	padding: 10px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+#siteMenuArea .td1 {
+	width: 33%;
+	height: 40px;
+	font-family: "k";
+	font-size: 20px;
+}
+
+#siteMenuArea .td1 a{
+	color: #F2EBDC;
+	font-weight: 900;
+	font-size: 25px;
+}
+
+#siteLoginArea {
+	height: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#siteContentArea {
+	width: 100%;
+	padding-top: 120px;
+	padding-bottom: 60px;
+}
+
+#homeimg {
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+#logoImg {
+	height: 100px;
+}

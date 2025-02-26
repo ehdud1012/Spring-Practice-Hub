@@ -1,0 +1,48 @@
+@charset "EUC-KR";
+
+table {
+	border: #674636 solid 3px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	background-color: #FFF8E8;
+	color: #674636;
+}
+
+th {
+	background-color: #F7EED3;
+	font-size: 25px;
+}
+
+td {
+	padding: 5px;
+	font-size: 15px;
+}
+
+.oo {
+	background-color: #F7EED3;
+}
+input {
+	width: 210px;
+	padding: 4px;
+	border: #674636 solid 1px;
+	outline: none;
+}
+button {
+	width: 300px;
+	height: 30px;
+	padding: 5px;
+	margin: 7px;
+	font-size: 15px;
+	background-color: #674636;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px #52372a;
+	color: #FFF8E8;
+}
+#result {
+	background-color: #674636;
+	color: #FFF8E8;
+	font-size: 20px;
+}
+

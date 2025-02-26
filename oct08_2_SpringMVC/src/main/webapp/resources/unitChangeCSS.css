@@ -1,0 +1,74 @@
+@charset "EUC-KR";
+/*
+	V : 디자이너
+*/
+
+@font-face {
+	font-family: "g";
+	src: url("font/ggg.TTF");
+}
+table {
+	border: black solid 3px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	font-family: "g";
+}
+
+th {
+	background-color: black;
+	color: white;
+	font-size: 50px;
+}
+
+td {
+	color: black;
+	padding: 5px;
+	font-size: 30px;
+}
+
+select {
+	width: 220px;
+	padding: 9px;
+	border: black solid 1px;
+	outline: none;
+	font-family: "f";
+}
+input {
+	width: 200px;
+	padding: 9px;
+	border: black solid 1px;
+	outline: none;
+	font-family: "f";
+}
+
+
+button {
+	width: 400px;
+	height: 30px;
+	padding: 5px;
+	margin: 7px;
+	font-size: 15px;
+	background-color: gray;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px black;
+	font-family: "g";
+	color: black;
+}
+
+#len th {
+	background-color: #DD5746;
+}
+
+#size th {
+	background-color: #51829B;
+}
+
+#temp th {
+	background-color: #76885B;
+}
+
+#spd th {
+	background-color: #FFC470;
+}

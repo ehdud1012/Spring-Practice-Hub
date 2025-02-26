@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kdy.pooh.member.MemberMapper">
+
+	<select id="getMemberByID" parameterType="com.kdy.pooh.member.Member" 
+						resultType="com.kdy.pooh.member.Member">
+		select * from pooh2_member where pm_id = #{pm_id}
+	</select>
+	
+	<insert id="join" parameterType="com.kdy.pooh.member.Member">
+		insert into pooh2_member values (#{pm_id}, #{pm_pw},
+				#{pm_name},#{pm_photo}, #{pm_birthday})
+	</insert>
+	
+	<update id="update" parameterType="com.kdy.pooh.member.Member">
+		update pooh2_member set pm_pw = #{pm_pw}, pm_name = #{pm_name}, pm_photo = #{pm_photo} where pm_id = #{pm_id}
+	</update>
+	
+	<delete id="bye" parameterType="com.kdy.pooh.member.Member">
+		delete from pooh2_member where pm_id = #{pm_id}
+	</delete>
+</mapper>

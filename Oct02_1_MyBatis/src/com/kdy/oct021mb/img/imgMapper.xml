@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper	namespace="imgMapper">
+	<insert id="upload" parameterType="com.kdy.oct021mb.img.Img">
+		insert into oct02_gallery values (oct02_gallery_seq.nextval,
+						#{o_title}, #{o_file}, sysdate)
+	</insert>
+	
+	<select id="imgSelect" resultType="com.kdy.oct021mb.img.Img" 
+			parameterType="com.kdy.oct021mb.img.ImgPager">
+		 select * 
+		 from (
+		 	select rownum as rn, o_no, o_title, o_file, o_date
+			from (
+				select * 
+				from oct02_gallery 
+				order by o_date desc
+			)
+		) 
+		 where rn &gt;= #{start} and rn &lt;= #{end}
+	</select>
+	<select id="imgCount" resultType="java.lang.Integer">
+		select count(*) from oct02_gallery
+	</select>
+</mapper>
